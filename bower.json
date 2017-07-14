@@ -1,7 +1,7 @@
 {
-  "name": "comprodls-app-seed-v1",
+  "name": "compro-webiste",
   "version": "1.0.0",
-  "description": "comproDLS App seed v1",
+  "description": "Compro Website",
   "main": "index.html",
   "dependencies": {
     "angular": "1.4.1",
