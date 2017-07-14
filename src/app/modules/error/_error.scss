@@ -1,0 +1,51 @@
+/*
+ * Error Page
+ */
+ 
+.error-container{
+    cursor:default;
+    .error-header{
+        height: 233px;
+        .icon{
+            padding: 20px;
+            .fa.fa-warning{
+                font-size: 70px;
+                color: #7e858f;
+            }
+        }
+        .text{
+            font: 36px arial;
+            color: #000;
+            @media only screen and (max-width: 580px) {
+                font: 28px arial;
+            }
+            @media only screen and (max-width: 420px) {
+                font: 20px arial;
+            }
+            margin: 10px;
+            .primary{
+                color: #7e858f;
+                font-weight: bold;
+            }
+        }
+        .error-message{
+            font-size:30px;
+            @media only screen and (max-width: 580px) {
+                font: 26px arial;
+            }
+            @media only screen and (max-width: 420px) {
+                font: 22px arial;
+            }
+        }       
+    }
+    .lead{        
+        margin: 50px 20px;
+        font: 16px arial;
+        div.error-description {
+          line-height: 1.5;
+          padding: 0% 25%;
+           
+        }         
+    }
+
+}

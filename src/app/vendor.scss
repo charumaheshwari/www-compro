@@ -1,0 +1,21 @@
+@import "theme/variables";
+@import "theme/mixins";
+
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+$OpenSansPath: "../../bower_components/open-sans-fontface/fonts";
+$slick-font-path: "../../bower_components/slick-carousel/slick/fonts/";
+$slick-loader-path : "../../bower_components/slick-carousel/slick/";
+
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/font-awesome/scss/font-awesome";
+@import "../../bower_components/open-sans-fontface/open-sans.scss";
+
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+
+@import "theme/bootstrap-override";
+@import "theme/libs-override";
+@import "theme/override-libs-custom";
+
+

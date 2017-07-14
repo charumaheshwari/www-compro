@@ -1,0 +1,37 @@
+<div class="container">
+  <main id="content" class="widget-verify-container" role="main">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 col-xs-10 col-lg-offset-4 col-sm-offset-3 col-xs-offset-1">
+        <h4 class="widget-verify-logo animated fadeInUp">
+          <i class="fa fa-circle text-gray"></i>
+          comproDLS App Seed V1
+          <i class="fa fa-circle text-warning"></i>
+        </h4>
+        <section class="widget widget-verify animated fadeInUp">
+          <header>
+            <h3>Verification</h3>
+            <div>To prevent un-authorized access of the information, please read the security question below and specify the correct answer. In case you don't know the answer, please contact your system administrator.</div>
+          </header>
+          <div class="widget-body">           
+            <form class="verify-form mt-lg" ng-submit="verify()">
+              <div class="alert alert-danger error-message" ng-show="errorMessage">{{errorMessage}}</div>
+              <p class="fw-normal">Security question:</p>
+              <h4 class="fw-semi-bold">{{verification.question}}</h4>
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" id="answer" placeholder="Your Answer" ng-model="verification.answer">
+              </div>
+              <div class="clearfix">
+                <div class="btn-toolbar pull-right"> 
+                  <button class="btn btn-inverse btn-sm" id="verifyButton" type="submit" ng-class="!isVerifyEnabled ? 'disabled' : ''">Verify <i class="fa fa-circle-o-notch fa-spin" ng-show="!isVerifyEnabled"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer">
+    comproDLS © 2015-2016
+  </footer>
+</div>

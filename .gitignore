@@ -1,0 +1,12 @@
+# Node Dependency directory
+node_modules
+
+#Bower installation directory
+bower_components/
+
+#Build folder
+dist
+.tmp
+
+# NPM Logs
+npm-debug.log

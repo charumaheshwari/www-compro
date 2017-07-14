@@ -1,0 +1,449 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Compro Technologies | Technology solutions & Product engineering | Salesforce Platinum Partner India</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  
+  <!-- CSS Links and definitions -->   
+  <style>
+      
+      /************************************************ 
+      * Startup Loader styles.
+      * Display loader until angular bootstraps.
+      * These styles are added to HTML to avoid extra call for loading styles for Startup Loader
+      ************************************************/
+    .uil-spin-css {
+      background: none;
+      position: relative;
+      width: 75px;
+      height: 75px;
+      -webkit-transform:scale(0.5);
+      transform:scale(0.5);
+    }
+    @media screen and (max-width: 767px){
+        #loader{
+            left: 35%;
+            top: 37%;
+        }
+        .uil-spin-css {
+          -webkit-transform:scale(0.3);     
+          transform:scale(0.3);
+        }
+    }
+    @-webkit-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-webkit-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-moz-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-ms-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-moz-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-webkit-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @-o-keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    @keyframes uil-spin-css {
+      0% {
+        opacity: 1;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.1;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    .uil-spin-css > div {
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+      margin-top: 4px;
+      position: absolute;
+    }
+    .uil-spin-css > div > div {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: #000;
+    }
+    .uil-spin-css > div:nth-of-type(1) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0s;
+      -moz-animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      -o-animation-delay: 0s;
+      animation-delay: 0s;
+    }
+    .uil-spin-css > div:nth-of-type(1) {
+      -ms-transform: translate(84px, 84px) rotate(45deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(45deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(45deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(45deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(45deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(2) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.12s;
+      -moz-animation-delay: 0.12s;
+      -webkit-animation-delay: 0.12s;
+      -o-animation-delay: 0.12s;
+      animation-delay: 0.12s;
+    }
+    .uil-spin-css > div:nth-of-type(2) {
+      -ms-transform: translate(84px, 84px) rotate(90deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(90deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(90deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(90deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(90deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(3) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.25s;
+      -moz-animation-delay: 0.25s;
+      -webkit-animation-delay: 0.25s;
+      -o-animation-delay: 0.25s;
+      animation-delay: 0.25s;
+    }
+    .uil-spin-css > div:nth-of-type(3) {
+      -ms-transform: translate(84px, 84px) rotate(135deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(135deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(135deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(135deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(135deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(4) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.37s;
+      -moz-animation-delay: 0.37s;
+      -webkit-animation-delay: 0.37s;
+      -o-animation-delay: 0.37s;
+      animation-delay: 0.37s;
+    }
+    .uil-spin-css > div:nth-of-type(4) {
+      -ms-transform: translate(84px, 84px) rotate(180deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(180deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(180deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(180deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(180deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(5) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.5s;
+      -moz-animation-delay: 0.5s;
+      -webkit-animation-delay: 0.5s;
+      -o-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+    }
+    .uil-spin-css > div:nth-of-type(5) {
+      -ms-transform: translate(84px, 84px) rotate(225deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(225deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(225deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(225deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(225deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(6) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.62s;
+      -moz-animation-delay: 0.62s;
+      -webkit-animation-delay: 0.62s;
+      -o-animation-delay: 0.62s;
+      animation-delay: 0.62s;
+    }
+    .uil-spin-css > div:nth-of-type(6) {
+      -ms-transform: translate(84px, 84px) rotate(270deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(270deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(270deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(270deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(270deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(7) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.75s;
+      -moz-animation-delay: 0.75s;
+      -webkit-animation-delay: 0.75s;
+      -o-animation-delay: 0.75s;
+      animation-delay: 0.75s;
+    }
+    .uil-spin-css > div:nth-of-type(7) {
+      -ms-transform: translate(84px, 84px) rotate(315deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(315deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(315deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(315deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(315deg) translate(70px, 0);
+    }
+    .uil-spin-css > div:nth-of-type(8) > div {
+      -ms-animation: uil-spin-css 1s linear infinite;
+      -moz-animation: uil-spin-css 1s linear infinite;
+      -webkit-animation: uil-spin-css 1s linear infinite;
+      -o-animation: uil-spin-css 1s linear infinite;
+      animation: uil-spin-css 1s linear infinite;
+      -ms-animation-delay: 0.87s;
+      -moz-animation-delay: 0.87s;
+      -webkit-animation-delay: 0.87s;
+      -o-animation-delay: 0.87s;
+      animation-delay: 0.87s;
+    }
+    .uil-spin-css > div:nth-of-type(8) {
+      -ms-transform: translate(84px, 84px) rotate(360deg) translate(70px, 0);
+      -moz-transform: translate(84px, 84px) rotate(360deg) translate(70px, 0);
+      -webkit-transform: translate(84px, 84px) rotate(360deg) translate(70px, 0);
+      -o-transform: translate(84px, 84px) rotate(360deg) translate(70px, 0);
+      transform: translate(84px, 84px) rotate(360deg) translate(70px, 0);
+    }
+
+
+      #loader-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1000;
+      }
+      #loader {
+          display: block;
+          position: relative;
+          left: 45%;
+          top: 39%;
+          font-size: 500%;
+          color:#22262e;
+          width: 75px;
+          height: 75px;
+          z-index: 1001;
+      }
+      .loaded #loader-wrapper {
+          visibility: hidden;
+      }
+      .loaded #loader {
+          opacity: 0;
+      }
+
+    </style>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css({.tmp/serve,src}) /styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <link rel="stylesheet" href="/app/vendor.css">
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) /styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automatically insert here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+<body ng-controller="App" sn-demo ng-class="{'nav-static': app.state['nav-static'], 'login-page': $state.is('login'), 'error-page': $state.is('error'), 'verify-page': $state.is('verify-auth')}">
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- loader icon -->
+    <div id="loader-wrapper">
+      <div id="loader">
+        <div class='uil-spin-css'>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="app" id="app" ui-view></div>
+    <script>
+        //Handlebars will fill this.
+        //Declare global variable DLS.APP which contains appContext 
+        var DLS = {};   
+        DLS.APP = JSON.parse({{{getObject appContext}}});
+    </script>
+
+<!-- build:js(src) /scripts/vendor.js data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 ,  "ajax": { "ignoreURLs": ["push.comprodls.com","push-staging1.comprodls.com"] }}' -->
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp/serve,.tmp/partials,src}) /scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+
+</body>
+</html>
