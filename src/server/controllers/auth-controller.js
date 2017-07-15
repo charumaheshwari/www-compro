@@ -43,7 +43,7 @@ var reqUtils = require('../libs/request-utils');
 var redis = require('../libs/redis');
 // Error Handler
 var errorHandler = require('../error/error-handler');
-var cas = require('module-app-sso').cas;
+//var cas = require('module-app-sso').cas;
 
 /************************************
 * External npm Modules
@@ -68,7 +68,7 @@ exports.otaStep1 = otaStep1;
 exports.otaStep2 = otaStep2;
 exports.isAuthenticated = isAuthenticated;
 exports.tokenAuthentication = tokenAuthentication;
-exports.casAuthentication = casAuthentication;
+//exports.casAuthentication = casAuthentication;
 exports.renderApp = renderApp;
 
 /************************************
